@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "author": "John Doe",
+  "title": "Sample Article Title",
+  "description": "This is a description of the sample article.",
+  "url": "https://example.com/sample-article",
+  "urlToImage": "https://example.com/sample-image.jpg",
+  "publishedAt": "2021-01-01T12:00:00Z",
+  "content": "This is the content of the sample article."
+}
