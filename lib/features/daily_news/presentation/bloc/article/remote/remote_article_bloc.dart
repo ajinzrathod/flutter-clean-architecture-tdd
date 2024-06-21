@@ -17,10 +17,15 @@ class RemoteArticlesBloc
 
   void onGetArticles(
       GetArticles event, Emitter<RemoteArticlesState> emit) async {
+    emit(const RemoteArticlesLoading());
     final dataState = await _getArticlesUseCase();
 
     if (dataState is DataSuccess && dataState.data!.isNotEmpty) {
       emit(RemoteArticlesDone(dataState.data!));
+    }
+
+    if (dataState is DataSuccess && dataState.data!.isEmpty) {
+      emit(const RemoteArticlesDone([]));
     }
 
     if (dataState is DataFailed) {
