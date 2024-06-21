@@ -1,3 +1,5 @@
+[![Flutter Test](https://github.com/ajinzrathod/flutter-clean-architecture-tdd/actions/workflows/flutter_test.yml/badge.svg)](https://github.com/ajinzrathod/flutter-clean-architecture-tdd/actions/workflows/flutter_test.yml)
+
 # jai_swaminarayan
 
 A new Flutter project.
