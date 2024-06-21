@@ -3,13 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jai_swaminarayan/features/daily_news/data/data_sources/remote/remote_news_api_service.dart';
 import 'package:jai_swaminarayan/features/daily_news/data/models/article_model.dart';
 import 'package:mockito/mockito.dart';
-import 'package:retrofit/retrofit.dart';
 
 import '../../../../helpers/daily_news_mock_generate_test_helper.mocks.dart';
 
 void main() {
-  const disabled = true;
-
   late MockDio mockDio;
   late RemoteNewsApiService remoteNewsApiService;
 

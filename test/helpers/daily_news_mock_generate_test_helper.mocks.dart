@@ -19,6 +19,14 @@ import 'package:jai_swaminarayan/features/daily_news/domain/entities/article_ent
     as _i12;
 import 'package:jai_swaminarayan/features/daily_news/domain/repository/article_repository.dart'
     as _i11;
+import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/delete_article_use_case.dart'
+    as _i13;
+import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/get_article_use_case.dart'
+    as _i15;
+import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/get_saved_articles_use_case.dart'
+    as _i16;
+import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/save_article_use_case.dart'
+    as _i14;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:retrofit/retrofit.dart' as _i2;
 import 'package:sqflite/sqflite.dart' as _i5;
@@ -289,6 +297,98 @@ class MockArticleRepository extends _i1.Mock implements _i11.ArticleRepository {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+}
+
+/// A class which mocks [DeleteArticleUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockDeleteArticleUseCase extends _i1.Mock
+    implements _i13.DeleteArticleUseCase {
+  MockDeleteArticleUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<void> call({_i12.ArticleEntity? params}) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {#params: params},
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+}
+
+/// A class which mocks [SaveArticleUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSaveArticleUseCase extends _i1.Mock
+    implements _i14.SaveArticleUseCase {
+  MockSaveArticleUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<void> call({_i12.ArticleEntity? params}) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {#params: params},
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+}
+
+/// A class which mocks [GetArticleUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetArticleUseCase extends _i1.Mock implements _i15.GetArticleUseCase {
+  MockGetArticleUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<_i6.DataState<List<_i12.ArticleEntity>>> call({dynamic params}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {#params: params},
+        ),
+        returnValue: _i4.Future<_i6.DataState<List<_i12.ArticleEntity>>>.value(
+            _FakeDataState_4<List<_i12.ArticleEntity>>(
+          this,
+          Invocation.method(
+            #call,
+            [],
+            {#params: params},
+          ),
+        )),
+      ) as _i4.Future<_i6.DataState<List<_i12.ArticleEntity>>>);
+}
+
+/// A class which mocks [GetSavedArticleUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetSavedArticleUseCase extends _i1.Mock
+    implements _i16.GetSavedArticleUseCase {
+  MockGetSavedArticleUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<List<_i12.ArticleEntity>> call({dynamic params}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {#params: params},
+        ),
+        returnValue:
+            _i4.Future<List<_i12.ArticleEntity>>.value(<_i12.ArticleEntity>[]),
+      ) as _i4.Future<List<_i12.ArticleEntity>>);
 }
 
 /// A class which mocks [Dio].

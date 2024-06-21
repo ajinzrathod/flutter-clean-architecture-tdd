@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jai_swaminarayan/core/resources/data_state.dart';
 import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/get_article_use_case.dart';
@@ -17,10 +15,15 @@ class RemoteArticlesBloc
 
   void onGetArticles(
       GetArticles event, Emitter<RemoteArticlesState> emit) async {
+    emit(const RemoteArticlesLoading());
     final dataState = await _getArticlesUseCase();
 
     if (dataState is DataSuccess && dataState.data!.isNotEmpty) {
       emit(RemoteArticlesDone(dataState.data!));
+    }
+
+    if (dataState is DataSuccess && dataState.data!.isEmpty) {
+      emit(const RemoteArticlesDone([]));
     }
 
     if (dataState is DataFailed) {
