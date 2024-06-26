@@ -5,6 +5,8 @@ import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/del
 import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/get_article_use_case.dart';
 import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/get_saved_articles_use_case.dart';
 import 'package:jai_swaminarayan/features/daily_news/domain/usecases/article/save_article_use_case.dart';
+import 'package:jai_swaminarayan/features/daily_news/presentation/bloc/article/local/local_article_bloc.dart';
+import 'package:jai_swaminarayan/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:mockito/annotations.dart';
 import 'package:dio/dio.dart';
 
@@ -15,7 +17,8 @@ import 'package:dio/dio.dart';
   DeleteArticleUseCase,
   SaveArticleUseCase,
   GetArticleUseCase,
-  GetSavedArticleUseCase
+  GetSavedArticleUseCase,
+  LocalArticleBloc
 ])
-@GenerateNiceMocks([MockSpec<Dio>()])
+@GenerateNiceMocks([MockSpec<Dio>(), MockSpec<RemoteArticlesBloc>()])
 void main() {}

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:jai_swaminarayan/features/daily_news/data/models/article_model.dart';
 import 'package:jai_swaminarayan/features/daily_news/presentation/widgets/article_tile_widget.dart';
 import 'package:logger/logger.dart';
 
